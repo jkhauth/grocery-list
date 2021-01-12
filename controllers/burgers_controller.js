@@ -1,3 +1,4 @@
+const { json } = require('express');
 var express = require('express')
 var router = express.Router();
 var burger = require('../models/burger')
@@ -6,14 +7,37 @@ var burger = require('../models/burger')
 
 router.get('/', function (req, res) {
     res.redirect('/burgers')
+    
   })
 
+//burgers homepage
 router.get('/burgers', function(req,res){
     burger.all(function (data){
-        var burgerObject = { burgers: data };
-        console.log(burgerObject)
-        res.render('index',burgerObject)
+        res.render('index', { burgers: data })
     })
+    burger.all(function(data){
+      console.log(data)
+      })
 })
+
+// insert new burger
+// router.post("/api/burgers", function(req, res) {
+//     console.log(req.body)
+//     res.end()
+//   });
+
+router.post("/api/burgers", function(req, res){
+    burger.insertOne(req.body.burger_name, function(){});
+    res.end()
+});
+    
+//all burgers
+router.get('/api/burgers/', function(req,res){
+    burger.all(function (data){
+        // console.log(data)
+        res.json(data);
+})})
+
+
 
 module.exports = router

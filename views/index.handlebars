@@ -1,0 +1,17 @@
+<ul>
+    {{#each burgers}}
+    <li>
+        <p>ID: {{this.id}}</p>
+        <p>Burger Name: {{this.burger_name}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+<form class="create-form">
+    <input type="text" id="burger-input" name="name">
+    <button type="submit">Add Burger</button>
+</form>
+
+<script href="jquery-3.5.1.min.js"></script>
+<script src="/assets/scripts/script.js"></script>
+
