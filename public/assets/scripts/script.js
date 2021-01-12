@@ -7,7 +7,8 @@ $(function() {
     var newBurger = {
       burger_name: $("#burger-input").val().trim(),
     };
-    // Send the POST request.
+    
+    //=========MAKES NEW ITEM
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
@@ -18,6 +19,8 @@ $(function() {
        }
     );
   });
+
+  //===========UPDATE BUTTON FUNCTIONALITY
   $(".update").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
@@ -35,6 +38,8 @@ $(function() {
        }
     );
   });
+
+  //======DELETE BUTTON FUNCTIONALITY
   $(".delete").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();

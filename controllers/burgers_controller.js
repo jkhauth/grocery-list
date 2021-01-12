@@ -17,17 +17,19 @@ router.get('/burgers', function(req,res){
     })
 })
 
-// insert new burger
+// insert new item
 router.post("/api/burgers", function(req, res){
     burger.insertOne(req.body.burger_name, function(){});
     res.end()
 });
 
+// updates new item
 router.put("/api/burgers", function(req, res){
     burger.updateOne(req.body.id)
     res.end()
 })
 
+// deletes item
 router.delete("/api/burgers", function(req, res){
     burger.deleteOne(req.body.id)
     res.end()
