@@ -15,21 +15,18 @@ router.get('/burgers', function(req,res){
     burger.all(function (data){
         res.render('index', { burgers: data })
     })
-    burger.all(function(data){
-      console.log(data)
-      })
 })
 
 // insert new burger
-// router.post("/api/burgers", function(req, res) {
-//     console.log(req.body)
-//     res.end()
-//   });
-
 router.post("/api/burgers", function(req, res){
     burger.insertOne(req.body.burger_name, function(){});
     res.end()
 });
+
+router.put("/api/burgers", function(req, res){
+    burger.updateOne(req.body.id)
+    res.end()
+})
     
 //all burgers
 router.get('/api/burgers/', function(req,res){

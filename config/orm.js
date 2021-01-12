@@ -13,6 +13,12 @@ var orm = {
         connection.query(queryString, [name], function (err, result){
                 if (err) throw err;
         });
+    },
+    updateOne: function(id){
+        var queryString = "UPDATE burgers set devoured = true WHERE id = ?"
+        connection.query(queryString, [id], function(err, result){
+            if (err) throw err;
+        })
     }
 }
 
