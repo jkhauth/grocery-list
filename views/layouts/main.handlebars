@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Movie To Watch</title>
+	<title>Grocery List</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/css/burger_style.css">
 </head>
 <body>
+	<div class="d-flex justify-content-center">
+	<h1>MY GROCERY LIST</h1>
+	</div>
+	<div class="d-flex justify-content-center">
 	{{{ body }}}
+	</div>
+	<div class="d-flex justify-content-center">
+	<form class="create-form">
+    <input type="text" id="burger-input" name="name">
+    <button type="submit">Add Item</button>
+	</form>
+	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>

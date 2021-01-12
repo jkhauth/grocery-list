@@ -27,7 +27,12 @@ router.put("/api/burgers", function(req, res){
     burger.updateOne(req.body.id)
     res.end()
 })
-    
+
+router.delete("/api/burgers", function(req, res){
+    burger.deleteOne(req.body.id)
+    res.end()
+})
+
 //all burgers
 router.get('/api/burgers/', function(req,res){
     burger.all(function (data){

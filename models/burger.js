@@ -12,6 +12,9 @@ var burger = {
     },
     updateOne: function (id) {
         orm.updateOne(id)
+    },
+    deleteOne: function (id) {
+        orm.deleteOne(id)
     }
 }
 

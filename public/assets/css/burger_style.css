@@ -1,0 +1,16 @@
+ul {
+    list-style-type: none;
+}
+li{
+    border: 2px solid black;
+}
+body {
+    background-color: beige;
+}
+.active{
+    background-color: yellow;
+}
+.done{
+    background-color: brown;
+    color: white;
+}

@@ -19,6 +19,12 @@ var orm = {
         connection.query(queryString, [id], function(err, result){
             if (err) throw err;
         })
+    },
+    deleteOne: function(id){
+        var queryString = "DELETE FROM burgers WHERE id = ?"
+        connection.query(queryString, [id], function(err, result){
+            if (err) throw err;
+        })
     }
 }
 

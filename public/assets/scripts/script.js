@@ -18,15 +18,32 @@ $(function() {
        }
     );
   });
+  $(".update").on("click", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+    var updatedBurger = {
+      id: this.id
+    }
+    
+    $.ajax("/api/burgers", {
+      type: "PUT",
+      data: updatedBurger
+    }).then(
+       function(){
+        // Reload the page to get the updated list
+        location.reload();
+       }
+    );
+  });
   $(".delete").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     var updatedBurger = {
       id: this.id
     }
-
+    
     $.ajax("/api/burgers", {
-      type: "PUT",
+      type: "DELETE",
       data: updatedBurger
     }).then(
        function(){
