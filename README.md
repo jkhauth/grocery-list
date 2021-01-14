@@ -1,9 +1,10 @@
 # Grocery List
 ## Description: 
- Using the application, a user can build a grocery list (create items, read those items, update when you get an item, and delete items on the list)
+ Using the application, a user can build a grocery list (create items, read those items, update when you get an item, and delete items on the list).
 
 
 I created this application using node, express, handlebars, and using mysql as the database config.
+
  [Heroku Link](https://grocery-list-jkhauth.herokuapp.com/burgers)
 
  [Github Repo](https://github.com/jkhauth/grocery-list)
